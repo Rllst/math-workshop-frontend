@@ -3,7 +3,6 @@ import {Box, Button, Form, FormField, Text, TextInput} from "grommet";
 import {useState} from "react";
 import axios from "axios";
 import {ToastContainer} from "react-toastify";
-import {api} from "../../../Constansts";
 
 const LoginPage = ()=>{
     const [credential, setCredential] = useState({});
@@ -11,7 +10,7 @@ const LoginPage = ()=>{
         setCredential({...credential, [event.target.name]: event.target.value});
     }
     const submit = ()=>{
-        axios.post('http://localhost:8000/api/login',credential).then((res)=>{
+        axios.post('https://35.209.131.218/api/login',credential).then((res)=>{
             localStorage.setItem('access_token', res.data.access_token);
             localStorage.setItem('refresh_token', res.data.refresh_token);
             window.location.href='/admin';
