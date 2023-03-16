@@ -2,7 +2,7 @@ import axios from "axios";
 import {errorMessage, successMessage} from "../ToastHelper";
 
 const instance = axios.create({
-    baseURL: "http://localhost:8000/api",
+    baseURL: "https://8741p.localtonet.com/api",
     headers: {
         "Content-Type": "application/json",
         "Bypass-Tunnel-Reminder":'dsa',
