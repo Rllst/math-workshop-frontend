@@ -1,6 +1,6 @@
 import axios from "axios";
 import {errorMessage, successMessage} from "../ToastHelper";
-import * as https from "https";
+const https = require.resolve("https-browserify");
 
 const instance = axios.create({
     baseURL: "http://35.209.246.97/api",
