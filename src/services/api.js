@@ -7,6 +7,10 @@ const instance = axios.create({
         "Content-Type": "application/json",
         "Bypass-Tunnel-Reminder":'dsa',
     },
+    httpsAgent: new https.Agent({
+        rejectUnauthorized: false
+    })
+
 });
 
 instance.interceptors.request.use(
