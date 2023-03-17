@@ -10,7 +10,7 @@ const LoginPage = ()=>{
         setCredential({...credential, [event.target.name]: event.target.value});
     }
     const submit = ()=>{
-        axios.post('https://35.209.131.218/api/login',credential).then((res)=>{
+        axios.post('https://35.209.246.97/api/login',credential).then((res)=>{
             localStorage.setItem('access_token', res.data.access_token);
             localStorage.setItem('refresh_token', res.data.refresh_token);
             window.location.href='/admin';
