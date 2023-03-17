@@ -1,5 +1,5 @@
 module.exports = {
   resolve:{
-      fallback: { "https": require.resolve("https") },
+      fallback: { "https": require.resolve("https-browserify") },
   },
 };
